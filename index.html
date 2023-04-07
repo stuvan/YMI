@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YMI | YOUNG MIND OF INDIA</title>
+
+    <!-- Fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Noto+Sans&display=swap');
+    </style>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./scripts/extended_tailwind.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/alphardex/aqua.css@master/dist/aqua.min.css">
+    <link rel="stylesheet" href="./styles/text-particle.css">
+    <link rel="stylesheet" href="./styles/reveal-text.css">
+    <link rel="stylesheet" href="./styles/shooting-star.css">
+    <link rel="stylesheet" href="./styles/slider.css">
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/scrollpage-js/scrollpage.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <!-- <script src="scripts/others/anime.js"></script> -->
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/ymi-fav.png" />
+</head>
+
+<body class="w-full min-h-screen">
+
+    <main id="main">
+
+        <!-- Section 1 start -->
+        <section id="section-1"
+            class="relative overflow-hidden page1 w-full h-screen flex flex-row justify-around items-center">
+
+            <!-- Scroll Down -->
+            <div id="sd-circle"
+                class="h-24 w-24 absolute z-40 bottom-0 rounded-full border-2 border-white flex items-center justify-center font-xl cursor-pointer">
+                <span class="scale-[3] text-white" id="sd-arrow">&#8595;</span>
+            </div>
+
+            <!-- Bg -->
+            <div class="absolute bg w-full h-[120%] -rotate-[65deg] translate-x-[30%] z-20 bg-gray-900"></div>
+
+            <div class="flex flex-col">
+
+                <!-- Cover image -->
+                <div id="cover-image"
+                    class=" w-3/4 h-screen absolute top-0 left-0 bg-[url('./assets/front-cover.jpg')] bg-cover bg-no-repeat bg-right bg-origin-border">
+                </div>
+
+
+            </div>
+            <div id="large-logo" class="z-20  font-bad-script text-white translate-x-20">
+
+                <!-- <img src="./assets/YMI.png" alt=""> -->
+
+                <div class="text-3xl flex justify-start z-10 -translate-y-2" id="reveal-text-1">
+                    <span class="reveal-it magic-text">We</span>&nbsp; <span class="reveal-it magic-text">are</span>
+                </div>
+                <div class="text-7xl flex justify-start z-10" id="reveal-text-2">
+                    <!-- Animation start -->
+                    <span class="magic">
+                        <span class="magic-star">
+                            <svg viewBox="0 0 512 512">
+                                <path
+                                    d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+                            </svg>
+                        </span>
+                        <span class="magic-star">
+                            <svg viewBox="0 0 512 512">
+                                <path
+                                    d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+                            </svg>
+                        </span>
+                        <span class="magic-star">
+                            <svg viewBox="0 0 512 512">
+                                <path
+                                    d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+                            </svg>
+                        </span>
+                        <span class="reveal-it magic-text">Young</span>&nbsp;<span
+                            class="reveal-it magic-text">Mind</span>
+                    </span>
+                    <!-- Animation end -->
+                </div>
+                <div class="text-6xl flex justify-end mt-2 z-10" id="reveal-text-3">
+                    <!-- Animation start -->
+                    <span class="magic">
+                        <span class="magic-star">
+                            <svg viewBox="0 0 512 512">
+                                <path
+                                    d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+                            </svg>
+                        </span>
+                        <span class="magic-star">
+                            <svg viewBox="0 0 512 512">
+                                <path
+                                    d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+                            </svg>
+                        </span>
+                        <span class="magic-star">
+                            <svg viewBox="0 0 512 512">
+                                <path
+                                    d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+                            </svg>
+                        </span>
+                        <span class="reveal-it magic-text">Of</span>&nbsp;<span
+                            class="reveal-it magic-text">India</span>
+                    </span>
+                    <!-- Animation end -->
+                </div>
+            </div>
+        </section>
+        <!-- Section 1 end -->
+
+        <!-- Section 2 Start -->
+        <section id="section-2"
+            class="page2 w-full h-screen p-12 flex justify-center items-center flex-col overflow-hidden relative bg-gray-900 text-white">
+            <div class="z-20 flex justify-center items-center flex-col">
+                <div class="reveal-text my-12 text-3xl underline">About Us</div>
+                <div>
+                    <p class="reveal-text my-3 text-center">We are Community of Ignited Minds of Youth</p>
+                    <p class="reveal-text my-3 text-center font-bold"> "What the country needs is what we aim for" </p>
+                    <p class="reveal-text my-3 text-justify">Our purpose is to connect the youth of India and provide
+                        them
+                        with an open platform where they can
+                        discuss important topics, interact with each other, collaborate with everyone else, and grow
+                        together. People here share their ideas, knowledge, and experiences. Humans learn and get better
+                        when they learn collaboratively in a supportive environment. We help each and everyone for
+                        collaborative growth because we don’t need competition between us, we need collaboration to grow
+                        in
+                        our lives.</p>
+                </div>
+                <div>
+                    <div class="learn-more reveal-text text-xl z-50">
+                        Learn More
+                    </div>
+                </div>
+            </div>
+            <div class="stars overflow-hidden absolute top-0 left-0 w-full h-screen"></div>
+            <!-- <div class="scrollable absolute top-0 left-0 w-full h-screen z-20"></div> -->
+        </section>
+        <!-- Section 2 end -->
+
+        <!-- Section 3 start -->
+        <section class="page3 w-full h-screen bg-blue-400 relative overflow-hidden" id="section-3">
+            <div
+                class="w-3/4 h-screen bg-red-400 absolute top-0 right-2/4 -skew-x-12 bg-[url('./assets/giveaway.png')]   bg-center">
+
+            </div>
+            <div class="w-3/4 h-screen bg-yellow-300 absolute top-0 left-2/4 -skew-x-12">
+                <div class="flex flex-col justify-center items-center -translate-x-48 p-52">
+                    <p class="my-12">Giveaway</p>
+                    <p class="text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et iure,
+                        ratione molestias
+                        necessitatibus fugit optio numquam perferendis quibusdam tempora, in ex sunt maiores aperiam
+                        aliquam ipsum asperiores! Corrupti, facere pariatur!</p>
+                </div>
+            </div>
+        </section>
+        <!-- Section 3 end -->
+
+        <!-- Section 4 start -->
+        <section class="page3 w-full h-screen bg-blue-400 relative overflow-hidden" id="section-3">
+            <div
+                class="w-3/4 h-screen bg-red-400 absolute top-0 left-2/4 skew-x-12 bg-[url('./assets/debate.jpg')] bg-cover bg-no-repeat bg-center">
+
+            </div>
+            <div class="w-3/4 h-screen bg-yellow-300 absolute top-0 right-2/4 skew-x-12">
+                <div class="flex flex-col justify-center items-center translate-x-48 p-52">
+                    <p class="my-12">Debate</p>
+                    <p class="text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et iure,
+                        ratione molestias
+                        necessitatibus fugit optio numquam perferendis quibusdam tempora, in ex sunt maiores aperiam
+                        aliquam ipsum asperiores! Corrupti, facere pariatur!</p>
+                </div>
+            </div>
+        </section>
+        <!-- Section 4 end -->
+
+        <!-- Section 3 start -->
+        <section class="page3 w-full h-screen bg-blue-400 relative overflow-hidden" id="section-3">
+            <div
+                class="w-3/4 h-screen bg-red-400 absolute top-0 right-2/4 -skew-x-12 bg-[url('./assets/giveaway.png')]   bg-center">
+
+            </div>
+            <div class="w-3/4 h-screen bg-yellow-300 absolute top-0 left-2/4 -skew-x-12">
+                <div class="flex flex-col justify-center items-center -translate-x-48 p-52">
+                    <p class="my-12">Giveaway</p>
+                    <p class="text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et iure,
+                        ratione molestias
+                        necessitatibus fugit optio numquam perferendis quibusdam tempora, in ex sunt maiores aperiam
+                        aliquam ipsum asperiores! Corrupti, facere pariatur!</p>
+                </div>
+            </div>
+        </section>
+        <!-- Section 3 end -->
+
+        <!-- Section 4 start -->
+        <section class="page3 w-full h-screen bg-blue-400 relative overflow-hidden" id="section-3">
+            <div
+                class="w-3/4 h-screen bg-red-400 absolute top-0 left-2/4 skew-x-12 bg-[url('./assets/debate.jpg')] bg-cover bg-no-repeat bg-center">
+
+            </div>
+            <div class="w-3/4 h-screen bg-yellow-300 absolute top-0 right-2/4 skew-x-12">
+                <div class="flex flex-col justify-center items-center translate-x-48 p-52">
+                    <p class="my-12">Debate</p>
+                    <p class="text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et iure,
+                        ratione molestias
+                        necessitatibus fugit optio numquam perferendis quibusdam tempora, in ex sunt maiores aperiam
+                        aliquam ipsum asperiores! Corrupti, facere pariatur!</p>
+                </div>
+            </div>
+        </section>
+        <!-- Section 4 end -->
+
+        <section class="page5 w-full h-screen bg-emerald-400" id="slider">
+            <div class="w-full h-screen flex flex-col justify-center items-center">
+                <h2>Our Team</h2>
+                <div class="slider">
+                    <!-- <div class="slide h-auto w-auto bg-white p-2 flex flex-col items-center justify-center">
+                        <div class="h-52 w-48 bg-[url('./assets/YMI.png')] bg-cover bg-no-repeat"></div>
+                        <span>User1</span>
+                        <span class="text-sm underline">Owner</span>
+                    </div>
+                    <div class="slide h-auto w-auto bg-white p-2 flex flex-col items-center justify-center">
+                        <div class="h-52 w-48 bg-[url('./assets/YMI.png')] bg-cover bg-no-repeat"></div>
+                        <span>User1</span>
+                        <span class="text-sm underline">Owner</span>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./scripts/footer.js"></script>
+    <script src="./scripts/page_scroll.js"></script>
+    <script src="./scripts/text-reveal.js"></script>
+    <script src="./scripts/text-particle.js"></script>
+    <script src="./scripts/shooting-star.js"></script>
+    <script src="./scripts/slider.js"></script>
+</body>
+
+</html>

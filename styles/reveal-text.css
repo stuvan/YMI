@@ -1,0 +1,32 @@
+.reveal-text {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1.2s ease-out;
+}
+
+.reveal-text-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#section-2 .learn-more {
+    font-family: 'Noto Sans', sans-serif;
+    /* font-size: 3em; */
+    /* position: absolute; */
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%,-50%); */
+    background-image: linear-gradient(gold, gold);
+    background-size: 100% 10px;
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+    transition: all .7s, background-position .5s ease-in-out;
+    cursor: pointer;
+}
+
+#section-2 .learn-more:hover {
+    background-size: 100% 100%;
+    background-position: 0% 100%;
+    transition: all .7s, background-size .5s ease-in-out;
+    color: black
+  }
