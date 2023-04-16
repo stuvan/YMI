@@ -1,199 +1,52 @@
-/* This is my own code, other one credit is give */
-class People {
-
-    constructor(name, role) {
+class TestimonialPerson {
+    constructor(name, imgUrl, review) {
         this.name = name;
-        this.role = role;
+        this.imgUrl = imgUrl;
+        this.review = review;
     }
 }
 
-const peopleData = [
-    new People("User9", "Developer"),
-    new People("User8", "Developer"),
-    new People("User7", "Mod"),
-    new People("User6", "Mod"),
-    new People("User5", "Mod"),
-    new People("User4", "Mod"),
-    new People("User3", "Admin"),
-    new People("User2", "Admin"),
-    new People("User1", "Owner"),
+let persons = [
+    new TestimonialPerson("Max", "https://cdn.discordapp.com/avatars/910407524711288864/7ffcbad00b0c35915dcfe08ae7365846", "this is the best server ever, a server where you are finally home! your own home! feels so comfortable here with SO MANY comforting, helpful and sweet people, best owner and mods/admins <3 "),
+    new TestimonialPerson("Deepanshu", "https://cdn.discordapp.com/avatars/755733650435342347/58721569b58acbc36b0e3031a33b4b85", "I’ve met a bunch of new people from this server. Everyone I’ve seen has been so kind! "),
+    new TestimonialPerson("निसर्ग", "https://cdn.discordapp.com/avatars/880812386045526048/9cdabcf2a902d3b466976a2ba93c9834", "I might be biased because I work for this server, but I really love it <3"),
+    new TestimonialPerson("▄︻デG̷a̷n̷g̷s̷t̷e̷r̷══━一", "https://cdn.discordapp.com/avatars/1064187322280722493/730f4c102250c3c3b7471545961061ac", "Excellent server, good events, active and full of friendly people with a good attitude"),
+    new TestimonialPerson("Titli 🦋", "https://cdn.discordapp.com/avatars/1089159644729053204/29717095ca1ad7bb3ee57fe95593c346", "The server has actually been a mind-blowing place to hang out and chill. The moderators are quite friendly and helpful when the server members require 'em!"),
+    new TestimonialPerson("pizza", "https://cdn.discordapp.com/avatars/1021865279485137018/a_c0c340994d4f9a6c682575b851dcb203", "It is an really good server to chill and hangout the staff team is very friendly and cooperative, They host a lot of amazing events to keep their audience entertained."),
+
+
+    /* Double */
+    new TestimonialPerson("Max", "https://cdn.discordapp.com/avatars/910407524711288864/7ffcbad00b0c35915dcfe08ae7365846", "this is the best server ever, a server where you are finally home! your own home! feels so comfortable here with SO MANY comforting, helpful and sweet people, best owner and mods/admins <3 "),
+    new TestimonialPerson("Deepanshu", "https://cdn.discordapp.com/avatars/755733650435342347/58721569b58acbc36b0e3031a33b4b85", "I’ve met a bunch of new people from this server. Everyone I’ve seen has been so kind! "),
+    new TestimonialPerson("निसर्ग", "https://cdn.discordapp.com/avatars/880812386045526048/9cdabcf2a902d3b466976a2ba93c9834", "I might be biased because I work for this server, but I really love it <3"),
+    new TestimonialPerson("▄︻デG̷a̷n̷g̷s̷t̷e̷r̷══━一", "https://cdn.discordapp.com/avatars/1064187322280722493/730f4c102250c3c3b7471545961061ac", "Excellent server, good events, active and full of friendly people with a good attitude"),
+    new TestimonialPerson("Titli 🦋", "https://cdn.discordapp.com/avatars/1089159644729053204/29717095ca1ad7bb3ee57fe95593c346", "The server has actually been a mind-blowing place to hang out and chill. The moderators are quite friendly and helpful when the server members require 'em!"),
+    new TestimonialPerson("pizza", "https://cdn.discordapp.com/avatars/1021865279485137018/a_c0c340994d4f9a6c682575b851dcb203", "It is an really good server to chill and hangout the staff team is very friendly and cooperative, They host a lot of amazing events to keep their audience entertained."),
 ]
 
+const slider = document.getElementById("testimonial-slider");
 
-const slider = document.querySelector('.slider');
+persons.forEach((v) => {
+    const figElem = document.createElement('figure');
+    figElem.classList = "font-raleway relative m-2.5 min-w-[400px] max-w-[480px] w-full h-auto text-neutral-600 text-left shadow-[0_0_5px_rgba(0,0,0,0.15)] box-border flex flex-row";
 
-peopleData.forEach((v, k) => {
-    const ele = document.createElement('div');
-    ele.classList = "slide h-auto w-auto bg-white p-2 flex flex-col items-center justify-center";
-    ele.innerHTML = `<div class="h-52 w-48 bg-[url('./assets/YMI.png')] bg-cover bg-no-repeat"></div>
-                        <span>${v.name}</span>
-                        <span class="text-sm underline">${v.role}</span>
-                    `;
+    figElem.innerHTML = `<figcaption
+    class=" w-3/5  bg-rose-50 rounded-tl-lg rounded-bl-lg rounded-tr-none rounded-br-none">
+    <blockquote
+        class="relative py-[25px] px-[50px] text-[0.8em] font-medium align-left m-0 leading-[1.6em] italic before:font-font-awesome before:content-['\\201C'] before:absolute before:text-5xl before:opacity-30 before:not-italic before:top-[25px] before:left-[20px] after:font-font-awesome after:content-['\\201D'] after:absolute after:text-5xl after:opacity-30 after:not-italic after:right-[20px] after:bottom-0">
+        ${v.review}
+        <div
+            class="top-[30px] left-full w-0 h-0 border-l-0 border-l-transparent border-l-solid border-r-[25px] border-r-transparent border-r-solid border-t-[25px] border-t-white border-t-solid m-0 absolute">
+        </div>
+    </blockquote>
+</figcaption>
+<img src="${v.imgUrl}" alt="sq-sample10"
+    class="float-right max-w-[40%] align-middle rounded-tl-none rounded-bl-none rounded-tr-lg rounded-br-lg"
+    width="100%" />
+<div class="absolute top-full w-3/5 py-[10px] px-[15px] text-rose-50 m-0 uppercase">
+    <span class="font-normal normal-case pl-1">- ${v.name}</span>
+</div>`;
 
-    slider.appendChild(ele)
+    slider.appendChild(figElem);
+
 })
-
-
-/*! Elastic Slider (c) 2014 // Taron Mehrabyan // Ruben Sargsyan */
-window.addEventListener('load', onWndLoad, false);
-function onWndLoad() {
-
-    var slider = document.querySelector('.slider');
-    var sliders = slider.children;
-
-
-
-
-    var initX = null;
-    var transX = 0;
-    var rotZ = 0;
-    var transY = 0;
-
-    var curSlide = null;
-
-    var Z_DIS = 50;
-    var Y_DIS = 10;
-    var TRANS_DUR = 0.4;
-
-    var images = document.querySelectorAll('img');
-    for (var i = 0; i < images.length; i++) {
-        images[i].onmousemove = function (e) {
-            e.preventDefault()
-
-        }
-        images[i].ondragstart = function (e) {
-            return false;
-
-        }
-    }
-
-    function init() {
-
-        var z = 0, y = 0;
-
-        for (var i = sliders.length - 1; i >= 0; i--) {
-            sliders[i].style.transform = 'translateZ(' + z + 'px) translateY(' + y + 'px)';
-
-            z -= Z_DIS;
-            y += Y_DIS;
-        }
-
-
-        attachEvents(sliders[sliders.length - 1]);
-
-
-
-    }
-    function attachEvents(elem) {
-        curSlide = elem;
-
-        curSlide.addEventListener('mousedown', slideMouseDown, false);
-        curSlide.addEventListener('touchstart', slideMouseDown, false);
-    }
-    init();
-    function slideMouseDown(e) {
-
-        if (e.touches) {
-            initX = e.touches[0].clientX;
-        }
-        else {
-            initX = e.pageX;
-        }
-
-
-        document.addEventListener('mousemove', slideMouseMove, false);
-        document.addEventListener('touchmove', slideMouseMove, false);
-
-        document.addEventListener('mouseup', slideMouseUp, false);
-        document.addEventListener('touchend', slideMouseUp, false);
-    }
-    var prevSlide = null;
-
-    function slideMouseMove(e) {
-        var mouseX;
-
-        if (e.touches) {
-            mouseX = e.touches[0].clientX;
-        }
-        else {
-            mouseX = e.pageX;
-        }
-
-        transX += mouseX - initX;
-        rotZ = transX / 20;
-
-        transY = -Math.abs(transX / 15);
-
-
-
-        curSlide.style.transition = 'none';
-        curSlide.style.webkitTransform = 'translateX(' + transX + 'px)' + ' rotateZ(' + rotZ + 'deg)' + ' translateY(' + transY + 'px)';
-        curSlide.style.transform = 'translateX(' + transX + 'px)' + ' rotateZ(' + rotZ + 'deg)' + ' translateY(' + transY + 'px)';
-        var j = 1;
-        //remains elements
-        for (var i = sliders.length - 2; i >= 0; i--) {
-
-            sliders[i].style.webkitTransform = 'translateX(' + transX / (2 * j) + 'px)' + ' rotateZ(' + rotZ / (2 * j) + 'deg)' + ' translateY(' + (Y_DIS * j) + 'px)' + ' translateZ(' + (-Z_DIS * j) + 'px)';
-            sliders[i].style.transform = 'translateX(' + transX / (2 * j) + 'px)' + ' rotateZ(' + rotZ / (2 * j) + 'deg)' + ' translateY(' + (Y_DIS * j) + 'px)' + ' translateZ(' + (-Z_DIS * j) + 'px)';
-            sliders[i].style.transition = 'none';
-            j++;
-        }
-
-
-
-        initX = mouseX;
-        e.preventDefault();
-        if (Math.abs(transX) >= curSlide.offsetWidth - 30) {
-
-            document.removeEventListener('mousemove', slideMouseMove, false);
-            document.removeEventListener('touchmove', slideMouseMove, false);
-            curSlide.style.transition = 'ease 0.2s';
-            curSlide.style.opacity = 0;
-            prevSlide = curSlide;
-            attachEvents(sliders[sliders.length - 2]);
-            slideMouseUp();
-            setTimeout(function () {
-
-
-
-
-
-                slider.insertBefore(prevSlide, slider.firstChild);
-
-                prevSlide.style.transition = 'none';
-                prevSlide.style.opacity = '1';
-                slideMouseUp();
-
-            }, 201);
-
-
-
-            return;
-        }
-    }
-    function slideMouseUp() {
-        transX = 0;
-        rotZ = 0;
-        transY = 0;
-
-        curSlide.style.transition = 'cubic-bezier(0,1.95,.49,.73) ' + TRANS_DUR + 's';
-
-        curSlide.style.webkitTransform = 'translateX(' + transX + 'px)' + 'rotateZ(' + rotZ + 'deg)' + ' translateY(' + transY + 'px)';
-        curSlide.style.transform = 'translateX(' + transX + 'px)' + 'rotateZ(' + rotZ + 'deg)' + ' translateY(' + transY + 'px)';
-        //remains elements
-        var j = 1;
-        for (var i = sliders.length - 2; i >= 0; i--) {
-            sliders[i].style.transition = 'cubic-bezier(0,1.95,.49,.73) ' + TRANS_DUR / (j + 0.9) + 's';
-            sliders[i].style.webkitTransform = 'translateX(' + transX + 'px)' + 'rotateZ(' + rotZ + 'deg)' + ' translateY(' + (Y_DIS * j) + 'px)' + ' translateZ(' + (-Z_DIS * j) + 'px)';
-            sliders[i].style.transform = 'translateX(' + transX + 'px)' + 'rotateZ(' + rotZ + 'deg)' + ' translateY(' + (Y_DIS * j) + 'px)' + ' translateZ(' + (-Z_DIS * j) + 'px)';
-
-            j++;
-        }
-
-        document.removeEventListener('mousemove', slideMouseMove, false);
-        document.removeEventListener('touchmove', slideMouseMove, false);
-
-    }
-
-
-}

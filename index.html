@@ -9,7 +9,8 @@
 
     <!-- Fonts -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Noto+Sans&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Noto+Sans&family=Raleway&display=swap');
+        @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
     </style>
 
     <!-- Tailwind -->
@@ -18,16 +19,16 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/alphardex/aqua.css@master/dist/aqua.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./styles/text-particle.css">
     <link rel="stylesheet" href="./styles/reveal-text.css">
     <link rel="stylesheet" href="./styles/shooting-star.css">
-    <link rel="stylesheet" href="./styles/slider.css">
+    <link rel="stylesheet" href="./styles/accordian.css">
 
     <!-- JS -->
     <script src="https://cdn.jsdelivr.net/npm/scrollpage-js/scrollpage.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://unpkg.com/split-type"></script>
-    <!-- <script src="scripts/others/anime.js"></script> -->
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="./assets/ymi-fav.png" />
@@ -39,16 +40,17 @@
 
         <!-- Section 1 start -->
         <section id="section-1"
-            class="relative overflow-hidden page1 w-full h-screen flex flex-row justify-around items-center">
+            class="relative overflow-hidden page1 w-full min-h-screen h-auto flex flex-row justify-around items-center">
 
             <!-- Scroll Down -->
             <div id="sd-circle"
-                class="h-24 w-24 absolute z-40 bottom-0 rounded-full border-2 border-white flex items-center justify-center font-xl cursor-pointer">
+                class="h-24 w-24 absolute z-40 bottom-0 rounded-full border-2 border-white flex items-center justify-center font-xl cursor-pointer"
+                onclick=" window.scrollBy({top: window.innerHeight,left: 0,behavior: 'smooth',})">
                 <span class="scale-[3] text-white" id="sd-arrow">&#8595;</span>
             </div>
 
             <!-- Bg -->
-            <div class="absolute bg w-full h-[120%] -rotate-[65deg] translate-x-[30%] z-20 bg-gray-900"></div>
+            <div class="absolute bg w-full h-[140%] -rotate-[65deg] translate-x-[30%] z-20 bg-gray-900"></div>
 
             <div class="flex flex-col">
 
@@ -124,7 +126,7 @@
 
         <!-- Section 2 Start -->
         <section id="section-2"
-            class="page2 w-full h-screen p-12 flex justify-center items-center flex-col overflow-hidden relative bg-gray-900 text-white">
+            class="page2 w-full min-h-screen h-auto p-12 flex justify-center items-center flex-col overflow-hidden relative bg-gray-900 text-white">
             <div class="z-20 flex justify-center items-center flex-col">
                 <div class="reveal-text my-12 text-3xl underline">About Us</div>
                 <div>
@@ -141,18 +143,17 @@
                         our lives.</p>
                 </div>
                 <div>
-                    <div class="learn-more reveal-text text-xl z-50">
+                    <!-- <div class="learn-more reveal-text text-xl z-50">
                         Learn More
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="stars overflow-hidden absolute top-0 left-0 w-full h-screen"></div>
-            <!-- <div class="scrollable absolute top-0 left-0 w-full h-screen z-20"></div> -->
         </section>
         <!-- Section 2 end -->
 
         <!-- Section 3 start -->
-        <section class="page3 w-full h-screen bg-blue-400 relative overflow-hidden" id="section-3">
+        <section class="page3 w-full min-h-screen h-auto bg-blue-400 relative overflow-hidden" id="section-3">
             <div
                 class="w-3/4 h-screen bg-red-400 absolute top-0 right-2/4 -skew-x-12 bg-[url('./assets/giveaway.png')]   bg-center">
 
@@ -170,7 +171,7 @@
         <!-- Section 3 end -->
 
         <!-- Section 4 start -->
-        <section class="page3 w-full h-screen bg-blue-400 relative overflow-hidden" id="section-3">
+        <section class="page4 w-full min-h-screen h-auto bg-blue-400 relative overflow-hidden" id="section-4">
             <div
                 class="w-3/4 h-screen bg-red-400 absolute top-0 left-2/4 skew-x-12 bg-[url('./assets/debate.jpg')] bg-cover bg-no-repeat bg-center">
 
@@ -187,8 +188,8 @@
         </section>
         <!-- Section 4 end -->
 
-        <!-- Section 3 start -->
-        <section class="page3 w-full h-screen bg-blue-400 relative overflow-hidden" id="section-3">
+        <!-- Section 5 start -->
+        <section class="page5 w-full min-h-screen h-auto bg-blue-400 relative overflow-hidden" id="section-5">
             <div
                 class="w-3/4 h-screen bg-red-400 absolute top-0 right-2/4 -skew-x-12 bg-[url('./assets/giveaway.png')]   bg-center">
 
@@ -203,10 +204,10 @@
                 </div>
             </div>
         </section>
-        <!-- Section 3 end -->
+        <!-- Section 5 end -->
 
-        <!-- Section 4 start -->
-        <section class="page3 w-full h-screen bg-blue-400 relative overflow-hidden" id="section-3">
+        <!-- Section 6 start -->
+        <section class="page6 w-full min-h-screen h-auto bg-blue-400 relative overflow-hidden" id="section-6">
             <div
                 class="w-3/4 h-screen bg-red-400 absolute top-0 left-2/4 skew-x-12 bg-[url('./assets/debate.jpg')] bg-cover bg-no-repeat bg-center">
 
@@ -221,25 +222,102 @@
                 </div>
             </div>
         </section>
-        <!-- Section 4 end -->
+        <!-- Section 6 end -->
 
-        <section class="page5 w-full h-screen bg-emerald-400" id="slider">
-            <div class="w-full h-screen flex flex-col justify-center items-center">
-                <h2>Our Team</h2>
-                <div class="slider">
-                    <!-- <div class="slide h-auto w-auto bg-white p-2 flex flex-col items-center justify-center">
-                        <div class="h-52 w-48 bg-[url('./assets/YMI.png')] bg-cover bg-no-repeat"></div>
-                        <span>User1</span>
-                        <span class="text-sm underline">Owner</span>
+        <!-- Section 7 start -->
+        <section
+            class="page7 w-full min-h-screen h-auto bg-blue-400 relative overflow-hidden flex flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-red-200 via-red-300 to-yellow-200"
+            id="section-7">
+
+
+            <h3 class="text-3xl uppercase underline reveal-text">testimonial</h3>
+            <div class="relative h-auto w-full flex flex-row flex-nowrap overflow-x-hidden py-12">
+                <div class="w-auto h-auto animate-wiggle flex flex-row " id="testimonial-slider">
+
+                    <!-- For reference -->
+                    <!-- <figure
+                        class="font-raleway relative m-2.5 min-w-[400px] max-w-[480px] w-full h-auto text-neutral-600 text-left shadow-[0_0_5px_rgba(0,0,0,0.15)] box-border flex flex-row">
+                        <figcaption
+                            class=" w-3/5  bg-rose-50 rounded-tl-lg rounded-bl-lg rounded-tr-none rounded-br-none">
+                            <blockquote
+                                class="relative py-[25px] px-[50px] text-[0.8em] font-medium align-left m-0 leading-[1.6em] italic before:font-font-awesome before:content-['\201C'] before:absolute before:text-5xl before:opacity-30 before:not-italic before:top-[25px] before:left-[20px] after:font-font-awesome after:content-['\201D'] after:absolute after:text-5xl after:opacity-30 after:not-italic after:right-[20px] after:bottom-0">
+                                1
+                                <div
+                                    class="top-[30px] left-full w-0 h-0 border-l-0 border-l-transparent border-l-solid border-r-[25px] border-r-transparent border-r-solid border-t-[25px] border-t-white border-t-solid m-0 absolute">
+                                </div>
+                            </blockquote>
+                        </figcaption>
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample10.jpg" alt="sq-sample10"
+                            class="float-right max-w-[40%] align-middle rounded-tl-none rounded-bl-none rounded-tr-lg rounded-br-lg"
+                            width="100%" />
+                        <div class="absolute top-full w-3/5 py-[10px] px-[15px] text-rose-50 m-0 uppercase">
+                            <span class="font-normal normal-case pl-1">- LittleSnippets</span>
+                        </div>
+                    </figure> -->
+
+                </div>
+            </div>
+        </section>
+        <!-- Section 7 end -->
+
+
+        <!-- Section 8 start -->
+        <section class="page8 min-h-screen h-auto w-full flex justify-center items-center flex-wrap py-12"
+            id="section-8">
+            <h3 class="text-3xl uppercase underline reveal-text">Our Team</h3>
+            <div class="h-auto w-full flex justify-center items-center flex-wrap" id="team-container"></div>
+            <!-- For reference -->
+
+            <!-- <div
+                class="group relative font-sans-serif w-[220px] h-[220px] hover:h-[260px] bg-rose-50 p-[30px] rounded-[50%] hover:rounded-[10px] shadow-[0_0_22px_#3336] duration-500 mx-[25px]">
+                <div class="relative w-full h-full duration-500 z-10 group-hover:translate-y-[-50px]">
+
+                    <img src="https://1.bp.blogspot.com/-8c7QTLoyajs/YLjr2V6KYRI/AAAAAAAACO8/ViVPQpLWVM0jGh3RZhh-Ha1-1r3Oj62wQCNcBGAsYHQ/s16000/team-1-3.jpg"
+                        alt="" class="w-full rounded-[50%] shadow-[0_0_22px_#3336] duration-500">
+                </div>
+                <div class="text-center translate-y-[-80px] opacity-0 duration-500 group-hover:opacity-100">
+                    <h3 class="text-[21px] font-sans-serif">Vin Diesel</h3>
+                    <p class="text-[15px] text-[#0c52a1] font-sans-serif mt-[2px] mb-[9px]">Senior App Developer</p>
+                    <div class="social-links">
+                        <a href="#" class="text-[#333] mr-[15px] font[21px] duration-500 hover:text-[#0c52a1]"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-[#333] mr-[15px] font[21px] duration-500 hover:text-[#0c52a1]"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-[#333] mr-[15px] font[21px] duration-500 hover:text-[#0c52a1]"><i
+                                class="fab fa-twitter"></i></a>
                     </div>
-                    <div class="slide h-auto w-auto bg-white p-2 flex flex-col items-center justify-center">
-                        <div class="h-52 w-48 bg-[url('./assets/YMI.png')] bg-cover bg-no-repeat"></div>
-                        <span>User1</span>
-                        <span class="text-sm underline">Owner</span>
-                    </div> -->
                 </div>
+            </div> -->
+        </section>
+        <!-- Section 8 end -->
+
+        <!-- Section 9 start -->
+        <section class="page9 min-h-screen h-auto w-full flex items-center justify-center flex-col my-12"
+            id="section-9">
+            <h2>Frequently Asked Questions</h2>
+            <div class="conainer w-2/4" id="accordian">
+
+                <!-- For reference -->
+                <!-- <div class="accordion">
+                    <div class="accordion-item">
+                        <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">This is a
+                                question</span><span class="icon" aria-hidden="true"></span></button>
+                        <div class="accordion-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut
+                                labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor
+                                pretium
+                                viverra suspendisse potenti.</p>
+
+                        </div>
+
+                    </div>
+                </div> -->
             </div>
         </section>
+        <!-- Section 9 end -->
+
+
     </main>
 
     <script src="./scripts/footer.js"></script>
@@ -248,6 +326,8 @@
     <script src="./scripts/text-particle.js"></script>
     <script src="./scripts/shooting-star.js"></script>
     <script src="./scripts/slider.js"></script>
+    <script src="./scripts/team.js"></script>
+    <script src="./scripts/accordion.js"></script>
 </body>
 
 </html>
